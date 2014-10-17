@@ -1,0 +1,13 @@
+application: wen777-udacity-ascii
+version: 1
+api_version: 1
+runtime: python27
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: ascii.app
+
+libraries:
+- name: jinja2
+  version: latest

@@ -1,0 +1,12 @@
+{% extends "blogBase.html" %}
+{% block content %}
+        <hr>
+        <a href="/blog"><img src="static/app.jpg" alt=""></a>
+        <hr>
+        {% for post in posts %}
+        <div class="post">
+            <div class="post-title"><a href="/blog">{{post.subject}}</a></div>
+            <pre class="post-body">{{post.content}}</pre>
+        </div>
+        {% endfor %}
+{% endblock %}

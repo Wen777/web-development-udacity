@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>/ascii/</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!-- <link rel="stylesheet"  type="text/css"  href="makeup.css"> -->
+    </head>
+    <body>
+        <h1>/ascii/</h1>
+        <form method="post">
+            <label>
+                <div>title</div><input type="text" name="title" value= {{title}}>
+            </label>
+            <label>
+                <div>art</div><textarea name="art"> {{art}} </textarea>
+            </label>
+            <div class="error"> {{error}}</div>
+            <input type="submit">
+        </form>
+        <hr>
+        {% for art in arts %}
+        <div class="art">
+            <div class="art-title"></div>
+            <pre class="art-body"></pre>
+        </div>
+        {% endfor %}
+    </body>
+</html>
