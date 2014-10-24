@@ -25,6 +25,7 @@ class Handler(webapp2.RequestHandler):
         return t.render(params)
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
+
     def post(self):
         subject = self.request.get("subject")
         content = self.request.get("content")
