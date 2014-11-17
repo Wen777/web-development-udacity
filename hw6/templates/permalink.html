@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{post.render() | safe}}
+  <footer>
+    <p>Posted by _hsiang</p>
+    <p>Queried {{ query_timeago }} seconds ago.</p>
+  </footer>
+{% endblock %}

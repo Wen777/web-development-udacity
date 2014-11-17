@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br><br>
+  {% endfor %}
+  <footer>
+    <p>Posted by _hsiang</p>
+    <p>Queried {{ query_timeago }} seconds ago.</p>
+  </footer>
+{% endblock %}
